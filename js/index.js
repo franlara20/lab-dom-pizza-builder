@@ -108,8 +108,36 @@ document.querySelector('.btn.btn-pepperoni').addEventListener('click', () => {
 
 // Iteration 1: Add click event listener on `<button class="btn btn-mushrooms">`
 
+document.querySelector('.btn.btn-mushrooms').addEventListener('click', () => {
+  state.hasMushrooms = !state.hasMushrooms;
+  console.log('Button mushroom clicked');
+  renderEverything();
+});
+
 // Iteration 1: Add click event listener on `<button class="btn btn-green-peppers">`
+
+document
+  .querySelector('.btn.btn-green-peppers')
+  .addEventListener('click', () => {
+    state.hasGreenPeppers = !state.hasGreenPeppers;
+    console.log('Button Green Peppers clicked');
+    renderEverything();
+  });
 
 // Iteration 2: Add click event listener on `<button class="btn btn-sauce">`
 
+document.querySelector('.btn.btn-sauce').addEventListener('click', () => {
+  state.hasWhiteSauce = !state.hasWhiteSauce;
+  console.log('Button white sauce clicked');
+  renderEverything();
+});
+
 // Iteration 2: Add click event listener on `<button class="btn btn-crust">`
+
+document.querySelector('.btn.btn-crust').addEventListener('click', () => {
+  state.hasGlutenFreeCrust = !state.hasGlutenFreeCrust;
+  console.log('Button gluten-free crust clicked');
+  renderEverything();
+});
+
+
