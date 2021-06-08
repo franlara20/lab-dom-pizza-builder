@@ -94,6 +94,24 @@ function renderButtons() {
 }
 
 function renderPrice() {
+  let total = basePrice;
+  // Iteration 4: change the HTML of `<aside class="panel price">`
+  const cuenta = document.querySelector('.panel.price ul');
+  cuenta.innerHTML = '';
+  for (ingredient in ingredients) {
+    if (state[ingredient]) {
+      cuenta.innerHTML += `<li> ${ingredients[ingredient].price} ${ingredients[ingredient].name} </li>`;
+      total += ingredients[ingredient].price;
+    }
+  }
+  const priceElemnet = document.querySelector('.panel.price strong');
+  priceElemnet.innerHTML = `$ ${total}`;
+}
+
+renderEverything();
+
+
+function renderPrice() {
   // Iteration 4: change the HTML of `<aside class="panel price">`
 }
 
